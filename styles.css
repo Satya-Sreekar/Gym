@@ -107,6 +107,10 @@
         text-decoration: none;
         margin: 10px 0;
     }
+    table
+    {
+        margin-left: 20vw;
+    }
     
     footer {
         margin-top: 6vh;

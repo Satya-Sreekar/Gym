@@ -17,7 +17,7 @@
             <center>
                 <h2>LOGIN</h2>
             </center>
-            <form action="./validation.php" method="POST">
+            <form action="Select.php" method="POST">
                 <label for="UserName">User Name:</label>
                 <input type="text" id="UserName" name="UserName" placeholder="Enter your User Name" required>
                 <label for="password">Password:</label>
@@ -25,8 +25,9 @@
                 <div class="select-container">
                     <label for="Membership">Membership:</label>
                     <select id="role" name="role">
-                        <option value="User">General</option>
-                        <option value="Moderator">Personal Training</option>
+                        <option value="General">General</option>
+                        <option value="Digital Training">Digital Training</option>
+                        <option value="Personal Training">Personal Training</option>
                         <option value="Admin">Admin</option>
                     </select>
                     <span class="select-arrow">&#9662;</span>
