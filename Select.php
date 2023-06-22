@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION['UN']))
+{
+    header("location:index.php");
+    exit;
+}
+?>
 <html>
 
 <head>
@@ -11,33 +18,31 @@
     <div class="heading">
         <img src="logo.jpg" alt="">
             <h1>Digital Trainer</h1>
+            <button onclick="window.location.href = 'logout.php';">Logout</button>
     </div>
     <div class="log">
         <div class="login">
             <center>
                 <h2>Select Muscle Group</h2>
+            <table>
+                    <tr>
+                    <th><button>Shoulder</button></th>
+                    <th><button>Chest</button></th>
+                    </tr>
+                    <tr>
+                    <th><button>Bicep</button></th>
+                    <th><button>Tricep</button></th>
+                    </tr>
+                    <tr>
+                    <th><button>Legs</button></th>
+                    <th><button>Abdomen</button></th>
+                    </tr>
+                    <tr>
+                    <th><button>Circuit</button></th>
+                    <th><button>General</button></th>
+                    </tr>
+            </table>
             </center>
-            <form action="Select.php" method="POST">
-                <table>
-                    <tr>
-                    <th>Chest</th>
-                    <th>Shoulder</th>
-                    </tr>
-                    <tr>
-                    <th>Bicep</th>
-                    <th>Tricep</th>
-                    </tr>
-                    <tr>
-                    <th>Legs</th>
-                    <th>General</th>
-                    </tr>
-                    <tr>
-                    <th>Circuit</th>
-                    <th>General</th>
-                    </tr>
-                </table>
-                
-            </form>
         </div>
     </div>
 </body>
